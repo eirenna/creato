@@ -18,4 +18,14 @@
 			arrows: false			
 		});
 	});
+
+	let btn = $('.ba-nav-btn');
+	let menu = $('.ba-nav')
+
+	btn.on('click', function(e) {
+		e.preventDefault();
+		menu.toggleClass('ba-open');
+		
+		//this.toggleClass('ba-open');
+	})
 })();

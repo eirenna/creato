@@ -1042,6 +1042,7 @@ a:hover {
 .ba-section {
   padding-top: 75px;
   background-color: #020407;
+  position: relative;
 }
 
 @media screen and (min-width: 1024px) {
@@ -1165,13 +1166,6 @@ a:hover {
 
 .ba-title-wrap {
   position: relative;
-  display: none;
-}
-
-@media screen and (min-width: 1024px) {
-  .ba-title-wrap {
-    display: block;
-  }
 }
 
 .ba-title-wrap .ba-section-title {
@@ -1184,6 +1178,7 @@ a:hover {
   color: rgba(255, 255, 255, 0.01);
   font-variant: small-caps;
   z-index: 0;
+  display: none;
 }
 
 .ba-title-wrap .ba-section-title--about {
@@ -1203,6 +1198,12 @@ a:hover {
 .ba-title-wrap .ba-section-title--testimonials {
   right: 15px;
   top: -140px;
+}
+
+@media screen and (min-width: 1200px) {
+  .ba-title-wrap .ba-section-title {
+    display: block;
+  }
 }
 
 .ba-header {
@@ -1268,11 +1269,11 @@ a:hover {
   -webkit-transform: translateX(-100%);
   -ms-transform: translateX(-100%);
   transform: translateX(-100%);
-  -webkit-transition: -webkit-transform .4s ease;
-  transition: -webkit-transform .4s ease;
-  -o-transition: transform .4s ease;
-  transition: transform .4s ease;
-  transition: transform .4s ease, -webkit-transform .4s ease;
+  -webkit-transition: -webkit-transform 0.4s ease;
+  transition: -webkit-transform 0.4s ease;
+  -o-transition: transform 0.4s ease;
+  transition: transform 0.4s ease;
+  transition: transform 0.4s ease, -webkit-transform 0.4s ease;
 }
 
 .ba-nav__item {
@@ -1640,7 +1641,7 @@ a:hover {
 
 .ba-parnter {
   margin-bottom: 30px;
-  opacity: .6;
+  opacity: 0.6;
 }
 
 .ba-parnter:hover {

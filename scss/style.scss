@@ -17,7 +17,7 @@ $xlarge: 1200px;
 html {
   scroll-behavior: smooth;
 }
- 
+
 body {
   font: 300 16px/1.885 "Raleway", sans-serif;
   color: $text-color;
@@ -76,6 +76,7 @@ a {
 .ba-section {
   padding-top: 75px;
   background-color: #020407;
+  position: relative;
   @media screen and (min-width: $large) {
     padding-top: 123px;
     &--padding-xsmall {
@@ -172,13 +173,8 @@ a {
   display: none;
 }
 
-
 .ba-title-wrap {
-  position: relative; 
-  display: none;
-  @media screen and (min-width: $large) {
-    display: block;
-  }
+  position: relative;
   .ba-section-title {
     position: absolute;
     top: -133px;
@@ -203,6 +199,10 @@ a {
     &--testimonials {
       right: 15px;
       top: -140px;
+    }
+    display: none;
+    @media screen and (min-width: $xlarge) {
+      display: block;
     }
   }
 }
@@ -233,7 +233,7 @@ a {
   z-index: 10;
   &:hover {
     svg {
-      fill: $primary-color; 
+      fill: $primary-color;
     }
   }
   svg {
@@ -256,7 +256,7 @@ a {
   padding: 70px 30px;
   z-index: 3;
   transform: translateX(-100%);
-  transition: transform .4s ease;
+  transition: transform 0.4s ease;
   &__item {
     margin-bottom: 10px;
   }
@@ -554,7 +554,7 @@ a {
 //partners
 .ba-parnter {
   margin-bottom: 30px;
-  opacity: .6;
+  opacity: 0.6;
   &:hover {
     opacity: 1;
   }
@@ -647,7 +647,7 @@ a {
   &__social {
     padding: 0;
     margin: 0;
-    display: flex;    
+    display: flex;
     list-style: none;
     li + li {
       margin-left: 15px;

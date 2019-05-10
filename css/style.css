@@ -1234,13 +1234,6 @@ a:hover {
 
 .ba-logo {
   display: block;
-  margin-bottom: 20px;
-}
-
-@media screen and (min-width: 1024px) {
-  .ba-logo {
-    margin-bottom: 0;
-  }
 }
 
 .ba-nav-btn {

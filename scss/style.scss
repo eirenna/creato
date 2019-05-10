@@ -227,10 +227,6 @@ a {
 
 .ba-logo {
   display: block;
-  margin-bottom: 20px;
-  @media screen and (min-width: $large) {
-    margin-bottom: 0;
-  }
 }
 
 .ba-nav-btn {

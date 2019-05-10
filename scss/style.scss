@@ -20,7 +20,8 @@ html {
 
 body {
   font: 300 16px/1.885 "Raleway", sans-serif;
-  color: $text-color;
+  color: $text-color;  
+  background-color: #020407;
 }
 
 h1,
@@ -75,10 +76,11 @@ a {
 
 .ba-section {
   padding-top: 75px;
-  background-color: #020407;
-  position: relative;
   @media screen and (min-width: $large) {
     padding-top: 123px;
+    &--services {
+      overflow-x: hidden;
+    }
     &--padding-xsmall {
       padding-top: 96px;
     }
@@ -177,32 +179,32 @@ a {
   position: relative;
   .ba-section-title {
     position: absolute;
-    top: -133px;
-    font-size: 170px;
+    top: -60px;
+    font-size: 70px;
     letter-spacing: 0.005em;
     line-height: 1;
     font-weight: 900;
-    color: rgba($text-color, 0.01);
+    color: rgba($text-color, 0.03);
     font-variant: small-caps;
     z-index: 0;
-    &--about {
-      left: 15px;
-    }
-    &--services {
-      right: -100px;
-      top: -114px;
-    }
-    &--gallery {
-      left: 7px;
-      top: -80px;
-    }
-    &--testimonials {
-      right: 15px;
-      top: -140px;
-    }
-    display: none;
-    @media screen and (min-width: $xlarge) {
-      display: block;
+    @media screen and (min-width: $large) {
+      font-size: 170px;
+      &--about {
+        top: -133px;
+        left: 15px;
+      }
+      &--services {
+        right: -100px;
+        top: -114px;
+      }
+      &--gallery {
+        left: 7px;
+        top: -80px;
+      }
+      &--testimonials {
+        right: 15px;
+        top: -140px;
+      }
     }
   }
 }
@@ -425,8 +427,10 @@ a {
   display: flex;
   margin-left: -10px;
   flex-wrap: wrap;
+  z-index: 1;
   @media screen and (min-width: $medium) {
     flex-wrap: nowrap;
+    flex-grow: 1;
   }
 }
 
@@ -435,6 +439,8 @@ a {
   img {
     display: block;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     margin-bottom: 10px;
     @media screen and (min-width: $medium) {
       margin-bottom: 0;
@@ -448,6 +454,8 @@ a {
   }
   .ba-width-30 {
     width: 30%;
+    display: flex;
+    flex-direction: column;
   }
 
   .ba-width-70 {

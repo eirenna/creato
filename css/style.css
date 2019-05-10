@@ -986,6 +986,7 @@ html {
 body {
   font: 300 16px/1.885 "Raleway", sans-serif;
   color: #fff;
+  background-color: #020407;
 }
 
 h1,
@@ -1041,13 +1042,14 @@ a:hover {
 
 .ba-section {
   padding-top: 75px;
-  background-color: #020407;
-  position: relative;
 }
 
 @media screen and (min-width: 1024px) {
   .ba-section {
     padding-top: 123px;
+  }
+  .ba-section--services {
+    overflow-x: hidden;
   }
   .ba-section--padding-xsmall {
     padding-top: 96px;
@@ -1170,39 +1172,35 @@ a:hover {
 
 .ba-title-wrap .ba-section-title {
   position: absolute;
-  top: -133px;
-  font-size: 170px;
+  top: -60px;
+  font-size: 70px;
   letter-spacing: 0.005em;
   line-height: 1;
   font-weight: 900;
-  color: rgba(255, 255, 255, 0.01);
+  color: rgba(255, 255, 255, 0.03);
   font-variant: small-caps;
   z-index: 0;
-  display: none;
 }
 
-.ba-title-wrap .ba-section-title--about {
-  left: 15px;
-}
-
-.ba-title-wrap .ba-section-title--services {
-  right: -100px;
-  top: -114px;
-}
-
-.ba-title-wrap .ba-section-title--gallery {
-  left: 7px;
-  top: -80px;
-}
-
-.ba-title-wrap .ba-section-title--testimonials {
-  right: 15px;
-  top: -140px;
-}
-
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1024px) {
   .ba-title-wrap .ba-section-title {
-    display: block;
+    font-size: 170px;
+  }
+  .ba-title-wrap .ba-section-title--about {
+    top: -133px;
+    left: 15px;
+  }
+  .ba-title-wrap .ba-section-title--services {
+    right: -100px;
+    top: -114px;
+  }
+  .ba-title-wrap .ba-section-title--gallery {
+    left: 7px;
+    top: -80px;
+  }
+  .ba-title-wrap .ba-section-title--testimonials {
+    right: 15px;
+    top: -140px;
   }
 }
 
@@ -1499,12 +1497,16 @@ a:hover {
   margin-left: -10px;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  z-index: 1;
 }
 
 @media screen and (min-width: 640px) {
   .ba-line {
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
   }
 }
 
@@ -1515,6 +1517,9 @@ a:hover {
 .ba-line > [class*="ba-width-"] img {
   display: block;
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
   margin-bottom: 10px;
 }
 
@@ -1530,6 +1535,13 @@ a:hover {
   }
   .ba-width-30 {
     width: 30%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
   .ba-width-70 {
     width: 70%;
